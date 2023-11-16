@@ -1,0 +1,24 @@
+Prepare project
+1. npm init
+2.a install express: npm install --save express
+2.b verify installation : cat package.json -> check express in "dependencies" section
+3. run server: npm index.js (it's available on localhost:port_number - the one that you've made express listen to)
+
+
+Sidenotes
+Node: JS runtime used to execute the code outside of the browser
+Express: library that runs in Node runtime. Has helpers methods to deal with HTTP traffic easier
+
+
+NodeJS server - listens to HTTP traffic on some specific port (like 5000).
+If some app (like Express) is bounded to the same port, Node then passes incoming requests to that app.
+Looking into request, Express then decides which method of the application can handle the request
+(somehow respond to this incoming request)
+In Express we write collection of route handlers which are the link between URL+parameters of the request
+and application methods, for example.
+Route 1: authentication
+Route 2: create & save new Survey/Campaign entity
+Route 3: provide admin entrypoint
+
+Node relies on common.js modules - system of import between the modules (const express = require('express'))
+React uses system of import ES2018 (import express from "express";)

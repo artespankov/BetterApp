@@ -1,0 +1,10 @@
+Checklist
+
+1st time
+
+1. Dynamic port binding - bind express to port
+ assigned by heroku to deployed application
+ (using process.env.PORT)
+2. Specify Node runtime - tell Heroku which version of Node we'd like to use (package.json/engines section)
+3. Specify start script - instruct Heroku what command to run to start the server (package.json/scripts section)
+4. Add .gitignore - dont include dependencies in deployment as Heroku will do that

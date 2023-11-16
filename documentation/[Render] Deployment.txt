@@ -1,0 +1,32 @@
+[Render] Git and GitHub Setup
+
+Render will run build scripts and deploy your application to remote servers 
+whenever you push code to a GitHub repository you connect to it. 
+So, the first step we need to do is to create this repository.
+
+1. Install the local Git CLI tools.
+macOS:
+Run the following command in your terminal:
+xcode-select --install
+If this command results in an error, 
+you may need to install the full version of XCode from the macOS AppStore.
+
+
+2. Create GitHub Repository
+https://github.com/new
+
+3. Local Git Repo Setup
+Next, we need to run some local Git commands to get our code into the repository. 
+Use your preferred terminal application to navigate to your project directory. 
+Run the following commands inside of the project root (where your package.json file is)
+Copy-paste the commands from the …or create a new repository on the command line section of the your GitHub repo:
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://YOUR_GITHUB_URL.git
+git push -u origin main
+
+4. Verify Deployment
+
+After the git push command from the last step, your code should now be deployed and visible in the newly created GitHub repository.
