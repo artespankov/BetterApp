@@ -1,0 +1,7 @@
+nodemon - extension that auto-reloads the server on every change in the code
+npm install --save nodemon & update package.json
+"scripts": {
+    ....
+    "dev": "nodemon index.js"
+}
+npm run dev

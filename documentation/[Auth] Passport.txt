@@ -1,0 +1,3 @@
+Passport library consists of 2 components
+1. Passport - general helpers to handle Auth
+2. Passport strategy - helpers to authenticate with one very specific method/provider (email/password, Google, Facebook etc)

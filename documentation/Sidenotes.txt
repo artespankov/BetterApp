@@ -22,3 +22,4 @@ Route 3: provide admin entrypoint
 
 Node relies on common.js modules - system of import between the modules (const express = require('express'))
 React uses system of import ES2018 (import express from "express";)
+
