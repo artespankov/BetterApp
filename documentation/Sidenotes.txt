@@ -23,3 +23,17 @@ Route 3: provide admin entrypoint
 Node relies on common.js modules - system of import between the modules (const express = require('express'))
 React uses system of import ES2018 (import express from "express";)
 
+
+Express app
+1. Serves the incoming request from the Browser -> Server -> App
+2. request then goes through the set of middlewares (like the one to process the Cookie header)
+3. after, request is passed to route handler
+4. route handler sends the response back
+
+Cookie vs Session store
+* You can store needed data like user id
+ a) right in cookie
+ b) in session. in this case in cookie communicated only session ID, and it's then matched with user data in DB.session
+* Cookie pros: simplicity, you can avoid additional DB query. cons: you can store in cookie up to 14 kB
+* Session store pros: you don't communicate the (encrypted) data through the network, so there's added layer to hide the data
+
