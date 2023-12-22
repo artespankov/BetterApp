@@ -4,8 +4,8 @@
   "description": "TL;DR: BetterApp is aimed to make our apps, well, better through collecting user testimonials with fast & easy bulk emails.  Target audience - owners and product managers of startups/small companies/indie game makers/bloggers & influencers/~~cryto enthusiasts~~",
   "main": "index.js",
   "engines": {
-    "node": "14.4.0",
-    "npm": "6.14.5"
+    "node": "v17.0.1",
+    "npm": "8.1.1"
   },
   "scripts": {
     "start": "node index.js",
