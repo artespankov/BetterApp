@@ -1,0 +1,28 @@
+
+1. index.js
+- Data Layer (Redux)
+- initial bootup logic
+
+
+2. App.js
+- Rendering Layer (React Router)
+- jsx is a mix of html within js files (like in App.js or other files with components)
+- component's instance is created using JSX
+
+3. Redux - store for states
+4. React-Redux is the package that provides utilities to bundle React and Redux
+- it provides <Provider> tag which has store prop, that is Redux store.
+- all the components inside of that tag will have an access to the store, including the root App component
+- every time there are changes to the state in store, Provider will update all of the components inside with new state
+
+
+5.
+App router initialize action creators
+Action creator is responsible for
+- make AJAX request backend API (Express) endpoint (with the help of axios library)
+- when response is back (dispatch), process it (via library called Redux Thunk)
+Action creator sends information from response to Redux store
+- inside of redux store, Reducer updates the action (for example with flag that user is logged in)
+
+
+

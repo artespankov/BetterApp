@@ -1,1 +1,8 @@
 Start react app: cd client && npm start
+
+Or using commands
+npm run +
+- start: start server (production mode)
+- server: start server (development mode, with nodemon)
+- client: start UI client
+- dev: start both server and client

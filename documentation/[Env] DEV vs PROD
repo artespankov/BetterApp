@@ -1,3 +1,6 @@
 1. keys.js defines which environment variables to load based on NODE_ENV env variable content
 2. dev.js contains config object that should be defined locally, including the same properties as prod.js
 3. prod.js is the production version of keys and it loads all the properties from Heroku/Render environment section
+4. in production, create-react-app does not exist so we don't need to use proxy to redirect our requests to Express server
+on the different domain. In production - we are going to use the build of our react app.
+For this, we will run Webpack and Babel over our files and obtain the build in client/public folder

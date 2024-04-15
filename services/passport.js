@@ -29,22 +29,18 @@ passport.use(new PassportGoogleStrategy(
         callbackURL: '/auth/google/callback',
         proxy: true
     },
-    (accessToken, refreshToken, profile, done) => {
+    async (accessToken, refreshToken, profile, done) => {
         if (profile.id != null) {
-            User.findOne({googleID: profile.id})
-                .then((existingUser) => {
-                    if(existingUser){
-                        // call passport function to notify we're done with custom post-auth flow
-                        // arguments - error object & user object
-                        done(null, existingUser);
-                    }
-                    else {
-                       new User({googleID: profile.id})
-                           .save()
-                           .then(user => done(null, user))
-
-                    }
-                })
+            const existingUser = await User.findOne({googleID: profile.id});
+            if(existingUser){
+                // call passport function to notify we're done with custom post-auth flow
+                // arguments - error object & user object
+                done(null, existingUser);
+            }
+            else {
+               const new_user = await new User({googleID: profile.id}).save();
+               done(null, new_user);
+            }
         }
 
 
